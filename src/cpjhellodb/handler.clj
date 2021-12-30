@@ -80,6 +80,16 @@
 ;(def mgdb (mg/get-db mgconn "testdb"))
 
 ;;;
+;;; Enlive
+;;;
+
+;;; for index, simply show index.html
+
+(enlive/deftemplate index "myscal/index.html"
+  []
+  )
+
+;;;
 ;;; Compojure Handlers
 ;;;
 
