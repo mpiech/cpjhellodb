@@ -79,6 +79,25 @@
 
 ;(def mgdb (mg/get-db mgconn "testdb"))
 
+;;;
+;;; Compojure Handlers
+;;;
+
+;;; main calendar page - enlive displays index.html SPA
+
+(defn handler-get-index []
+  (index)
+  )
+
+(defn handler-get-test [params]
+  (json/write-str 
+   [
+    [37.809760 -122.410900]
+    [37.819150 -122.435400]
+    [37.826040 -122.465100]
+    ])
+  )
+
 ;;; 
 ;;; Compojure Routing
 ;;;
@@ -87,6 +106,8 @@
   (cpj/HEAD "/" [] "")
   (cpj/GET "/" []
     (handler-get-index))
+  (cpj/GET "/test" []
+    (handler-get-test))
   (cpjroute/files "/")
   (cpjroute/resources "/")
   (cpjroute/not-found "Not Found")
