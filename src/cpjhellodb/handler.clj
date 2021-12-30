@@ -77,7 +77,7 @@
 ;      (mg/connect)
 ;      )))
 
-(def mgdb (mg/get-db mgconn "testdb"))
+;(def mgdb (mg/get-db mgconn "testdb"))
 
 ;;; 
 ;;; Compojure Routing
