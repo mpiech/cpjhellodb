@@ -85,7 +85,7 @@
 
 ;;; for index, simply show index.html
 
-(enlive/deftemplate index "myscal/index.html"
+(enlive/deftemplate index "cpjhellodb/index.html"
   []
   )
 
