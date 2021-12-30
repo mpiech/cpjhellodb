@@ -1,4 +1,4 @@
-(defproject cpjhello "0.1.0-SNAPSHOT"
+(defproject cpjhellodb "0.1.0-SNAPSHOT"
   :description "sample Clojure/Compojure app with database"
   :url "http://example.com/FIXME"
   :min-lein-version "2.0.0"
@@ -27,7 +27,7 @@
    ]
   :plugins
   [[lein-ring "0.12.5"]]
-  :ring {:handler cpjhello.handler/app
+  :ring {:handler cpjhellodb.handler/app
          :port 8080}
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
