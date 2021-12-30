@@ -53,29 +53,29 @@
 
 ;;; Mongo database objects
 
-(def mgconn 
-  (if-let [host (System/getenv "MONGODB_26_RHEL7_SERVICE_HOST")]
-    (let [port (Integer/parseInt
-                (System/getenv
-                 "MONGODB_26_RHEL7_SERVICE_PORT"))
-          uname "testusr"
-          dbname "tracks"
-          pwd-raw "testpwd"
-          pwd (.toCharArray pwd-raw)
-          creds (mcr/create uname dbname pwd)]
-      (mg/connect-with-credentials host port creds))
-    (if-let [host (System/getenv "MONGODB_SERVICE_HOST")]
-      (let [port (Integer/parseInt
-                  (System/getenv
-                   "MONGODB_SERVICE_PORT"))
-            uname "testusr"
-            dbname "tracks"
-            pwd-raw "testpwd"
-            pwd (.toCharArray pwd-raw)
-            creds (mcr/create uname dbname pwd)]
-        (mg/connect-with-credentials host port creds))
-      (mg/connect)
-      )))
+;(def mgconn 
+;  (if-let [host (System/getenv "MONGODB_26_RHEL7_SERVICE_HOST")]
+;    (let [port (Integer/parseInt
+;                (System/getenv
+;                 "MONGODB_26_RHEL7_SERVICE_PORT"))
+;          uname "testusr"
+;          dbname "tracks"
+;          pwd-raw "testpwd"
+;          pwd (.toCharArray pwd-raw)
+;          creds (mcr/create uname dbname pwd)]
+;      (mg/connect-with-credentials host port creds))
+;    (if-let [host (System/getenv "MONGODB_SERVICE_HOST")]
+;      (let [port (Integer/parseInt
+;                  (System/getenv
+;                   "MONGODB_SERVICE_PORT"))
+;            uname "testusr"
+;            dbname "tracks"
+;            pwd-raw "testpwd"
+;            pwd (.toCharArray pwd-raw)
+;            creds (mcr/create uname dbname pwd)]
+;        (mg/connect-with-credentials host port creds))
+;      (mg/connect)
+;      )))
 
 (def mgdb (mg/get-db mgconn "testdb"))
 
