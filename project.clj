@@ -30,5 +30,5 @@
   :ring {:handler cpjhellodb.handler/app
          :port 8080}
   :profiles
-  {:dev {:dependencies [[javax.servlet/servlet-api "4.0.1"]
+  {:dev {:dependencies [[javax.servlet/javax.servlet-api "4.0.1"]
                         [ring/ring-mock "0.4.0"]]}})

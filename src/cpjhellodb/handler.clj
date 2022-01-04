@@ -10,6 +10,7 @@
    [clj-time.coerce :as ctime]
    [clojure.java.jdbc :as jdbc]
    [clojure.data.json :as json]
+   [clojure.java.io :as io]
    [monger.core :as mg]
    [monger.credentials :as mcr]
    [monger.collection :as mc]
