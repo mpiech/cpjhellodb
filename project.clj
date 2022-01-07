@@ -7,7 +7,7 @@
    ;http://clojure.org/downloads
    [org.clojure/clojure "1.10.0"]
    ;https://github.com/clojure/tools.nrepl
-   [org.clojure/tools.nrepl "0.2.13"]
+   [nrepl "0.9.0"]
    ;https://github.com/weavejester/compojure
    [compojure "1.6.1"]
    ;https://github.com/cgrand/enlive
@@ -26,7 +26,8 @@
    [com.novemberain/monger "3.5.0"]
    ]
   :plugins
-  [[lein-ring "0.12.5"]]
+  [[lein-ring "0.12.6"]
+   [cider/cider-nrepl "0.27.3"]]
   :ring {:handler cpjhellodb.handler/app
          :port 8080}
   :profiles
