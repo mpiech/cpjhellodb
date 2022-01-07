@@ -1,6 +1,6 @@
 (ns cpjhellodb.handler
   (:require
-   [clojure.tools.nrepl.server :as nrepl]
+   [nrepl.server :as nrepl]
    [compojure.core :as cpj]
    [compojure.route :as cpjroute]
    [ring.middleware.defaults :as ring]
