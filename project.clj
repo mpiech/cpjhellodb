@@ -6,7 +6,7 @@
   [
    ;http://clojure.org/downloads
    [org.clojure/clojure "1.10.0"]
-   ;https://github.com/clojure/tools.nrepl
+   ;https://github.com/nrepl/nrepl
    [nrepl "0.9.0"]
    ;https://github.com/weavejester/compojure
    [compojure "1.6.1"]
@@ -20,6 +20,9 @@
    [clj-time "0.15.2"]
    ;https://github.com/clojure/java.jdbc
    [org.clojure/java.jdbc "0.7.12"]
+   ;https://github.com/remodoy/clj-postgresql
+   ;[clj-postgresql "0.7.0"]
+   [org.postgresql/postgresql "42.3.1"]
    ;http://dev.mysql.com/downloads/connector/j/
    [mysql/mysql-connector-java "8.0.27"]
    ;https://github.com/michaelklishin/monger
